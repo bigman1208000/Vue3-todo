@@ -1,0 +1,27 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* TailwindCSS styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Removed all animation for sites */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
+  }
+}
+
+/* Transition styles */
+.todo-fade-enter-active,
+.todo-fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.todo-fade-enter-from,
+.todo-fade-leave-to {
+  opacity: 0;
+}
